@@ -1,5 +1,4 @@
 ---
 title: "Index"
+index: 0
 ---
-
-# Goodbye

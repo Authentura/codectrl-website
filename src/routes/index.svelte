@@ -2,4 +2,6 @@
 	<title>CodeCTRL | Home</title>
 </svelte:head>
 
-<h1>Hello</h1>
+<main>
+	<h1>CodeCTRL</h1>
+</main>

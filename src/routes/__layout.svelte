@@ -10,7 +10,7 @@
 <style>
 	main {
 		display: grid;
-		grid-template-columns: 300px auto;
-		padding: 1em;
+		grid-template-columns: 240px auto;
+		padding: 0.5em;
 	}
 </style>
