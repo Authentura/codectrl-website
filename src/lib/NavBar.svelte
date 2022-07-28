@@ -8,7 +8,7 @@
 		</ul>
 		<ul>
 			<li><a href="/docs" class="contrast">Documentation</a></li>
-			<li><a href="#" class="contrast">GitHub</a></li>
+			<li><a href="https://github.com/Authentura/codectrl" class="contrast">GitHub</a></li>
 		</ul>
 	</nav>
 </div>
