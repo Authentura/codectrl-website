@@ -3,14 +3,17 @@
 </script>
 
 <NavBar />
-<main class="container">
+<main>
 	<slot />
 </main>
 
 <style>
 	main {
-		display: grid;
-		grid-template-columns: 240px auto;
-		padding: 0.5em;
+		margin: 0;
+		width: 100vw;
+		max-width: 100vw;
+		height: 90%;
+		max-height: 90%;
+		padding: 0;
 	}
 </style>

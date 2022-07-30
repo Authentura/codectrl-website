@@ -36,24 +36,26 @@
 	<title>CodeCTRL | Documentation | {title}</title>
 </svelte:head>
 
-<div>
-	<aside>
-		<details class="main" open="true">
-			<summary>Documentation</summary>
-			<nav class="container-fluid">
-				<ul>
-					{#each docs as doc}
-						<DocTocItem {doc} {setTitle} />
-					{/each}
-				</ul>
-			</nav>
-		</details>
-	</aside>
-</div>
+<main>
+	<div>
+		<aside>
+			<details class="main" open="true">
+				<summary>Documentation</summary>
+				<nav class="container-fluid">
+					<ul>
+						{#each docs as doc}
+							<DocTocItem {doc} {setTitle} />
+						{/each}
+					</ul>
+				</nav>
+			</details>
+		</aside>
+	</div>
 
-<div class="container">
-	<slot />
-</div>
+	<div class="container">
+		<slot />
+	</div>
+</main>
 
 <style>
 	summary::after {
@@ -66,7 +68,21 @@
 
 	.container {
 		margin-left: 1em;
-		padding-left: 1em;
+		padding: 1em;
 		border-left: var(--border-width) solid var(--accordion-border-color);
+		overflow-y: auto;
+		max-width: calc(100% - 1em);
 	}
+
+	main {
+		display: grid;
+		grid-template-columns: 300px auto;
+		padding: 0.5em;
+		margin: 0;
+		width: 100vw;
+		max-width: 100vw;
+		height: 100%;
+		max-height: 100%;
+	}
+
 </style>
