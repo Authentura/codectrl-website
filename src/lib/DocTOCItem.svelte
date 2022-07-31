@@ -97,8 +97,7 @@
 
 	a.active {
 		color: var(--contrast);
-		/* background-color: var(--secondary);*/
-		background-color: #00897b55;
+		background-color: var(--secondary);
 		border: none;
 		text-align: left;
 		padding: 0.2em;

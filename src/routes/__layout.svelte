@@ -7,7 +7,8 @@
 	<slot />
 </main>
 <div class="footer">
-	Copyright <a href="https://authentura.com">Authentura</a> 2022 | Website source available <a href="">here</a>.
+	Copyright <a href="https://authentura.com">Authentura</a> 2022 
+	| Website source available <a href="https://github.com/Authentura/codectrl-website">here</a>.
 </div>
 
 <style>
@@ -29,6 +30,21 @@
 
 	:root {
 		--font-family: "Red Hat Display", sans-serif !important;
+		--primary: #c7235d !important;
+		--primary-hover: #a81e4f !important;
+	}
+
+
+	@media (prefers-color-scheme: dark) {
+		:root {
+			--secondary: #6b3270 !important;
+		}
+	}
+
+	@media (prefers-color-scheme: light) {
+		:root {
+			--secondary: #f2b4bf !important;
+		}
 	}
 
 	:global(pre, code, kbd, samp) {
@@ -41,15 +57,17 @@
 		max-width: 100vw;
 		height: 90%;
 		max-height: 90%;
+		height: 90%;
+		overflow-y: auto;
 		padding: 0;
 	}
 
 	.footer {
 		display: block;
-		position: absolute;
+		position: fixed;
 		padding: 0.2em;
 		border-top: var(--border-width) solid var(--accordion-border-color);
-		height: 1em;
+		height: 2em;
 		width: 100%;
 		top: calc(100% - 2em);
 		text-align: center;

@@ -5,3 +5,19 @@ body {
 	max-height: 100%;
 	width: 100%;
 }
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--hero-bg: url("/images/background-dark.svg");
+		--hero-bg-flipped: url("/images/background-dark-flipped.svg");
+		--logo: url("/images/logo-dark.svg");
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--hero-bg: url("/images/background-light.svg");
+		--hero-bg-flipped: url("/images/background-light-flipped.svg");
+		--logo: url("/images/logo-light.svg");
+	}
+}
