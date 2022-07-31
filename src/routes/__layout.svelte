@@ -89,8 +89,8 @@
 
 	main {
 		margin: 0;
-		width: 100vw;
-		max-width: 100vw;
+		width: 100%;
+		max-width: 100%;
 		height: 90%;
 		max-height: 90%;
 		height: 90%;
