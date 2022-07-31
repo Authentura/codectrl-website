@@ -16,25 +16,12 @@
 
 <script>
 	// @ts-nocheck
-	import { currentDocPageTitle } from "$lib/stores";
 	import DocTocItem from "$lib/DocTOCItem.svelte";
 	import { sortDocFiles } from "$lib/doc";
 
-	/** @type {string} */
-	let title = "Index";
-	$: title = $currentDocPageTitle;
 	/** @type {import("$lib/doc").DocFile[]} */
 	export let docs;
-
-	/** @param {string} newTitle */
-	const setTitle = (newTitle) => {
-		$currentDocPageTitle = newTitle;
-	};
 </script>
-
-<svelte:head>
-	<title>CodeCTRL | Documentation | {title}</title>
-</svelte:head>
 
 <main>
 	<div>
@@ -44,7 +31,7 @@
 				<nav class="container-fluid">
 					<ul>
 						{#each docs as doc}
-							<DocTocItem {doc} {setTitle} />
+							<DocTocItem {doc} />
 						{/each}
 					</ul>
 				</nav>

@@ -3,7 +3,6 @@
 	import { afterNavigate } from "$app/navigation";
 
 	export let doc: DocFile;
-	export let setTitle: (_: string) => void;
 	export let root = "/docs";
 
 	let activated = false;
@@ -24,7 +23,7 @@
 		<li>
 			<details open>
 				{#if doc.slug === "index"}
-					<summary on:click={() => setTitle(doc.metadata.title)}>
+					<summary>
 						<a
 							href={root}
 							class="contrast"
@@ -36,7 +35,7 @@
 						</a>
 					</summary>
 				{:else}
-					<summary on:click={() => setTitle(doc.metadata.title)}>
+					<summary>
 						<a
 							href={`${root}/${doc.slug}`}
 							class="contrast"
@@ -51,7 +50,7 @@
 				<nav class="container-fluid">
 					<li>
 						{#each doc.metadata.children as child}
-							<svelte:self doc={child} {setTitle} root={`${root}/${doc.slug}`} />
+							<svelte:self doc={child} root={`${root}/${doc.slug}`} />
 						{/each}
 					</li>
 				</nav>
@@ -63,7 +62,6 @@
 				class="contrast"
 				class:active={activated}
 				role="button"
-				on:click={() => setTitle(doc.metadata.title)}
 				href={`/docs/`}
 				aria-current="page"
 			>

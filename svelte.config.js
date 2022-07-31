@@ -14,10 +14,10 @@ const config = {
 	preprocess: [
 		preprocess(),
 		mdsvex({
-			extensions: [".md"]
-			// layout: {
-			// 	_: path.join(dirname, './src/routes/docs/__layout.svelte')
-			// }
+			extensions: [".md"],
+			layout: {
+				_: path.join(dirname, "./src/routes/docs/_template.svelte")
+			}
 		})
 	],
 

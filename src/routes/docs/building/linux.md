@@ -23,7 +23,8 @@ title: "Compiling on Linux"
 Supported versions:
 
 - 22.04 - Builds are automatically generated with CI.
-- 21.10, 21.04 and 20.04 / Debian 11 and 10 - Supported but not generated automatically.
+- 21.10, 21.04 and 20.04 / Debian 11 and 10 - Supported but not generated
+  automatically.
 
 If you want to build CodeCTRL from source, you will need the following
 dependencies:
@@ -55,4 +56,37 @@ Which can be installed if you copy and paste this command into your terminal:
 $ sudo apt install build-essential gcc clang cmake -y
 ```
 
+You can now go back to the [Building page](/docs/building#building-with-cargo)
+and follow the rest of the instructions.
+
 <h1 id="fedora">Fedora</h1>
+
+Supported versions:
+
+- Fedora Rawhide and 36 - Builds automatically generated with CI.
+- Fedora 34 and 35 - Supported but not generated automatically.
+
+If you want to build CodeCTRL from source, you will need the following
+dependencies:
+
+- `gobject-introspection-devel`
+- `cairo-devel`
+- `atk-devel`
+- `pango-devel`
+- `gdk-pixbuf2-devel`
+- `gtk3-devel`
+
+Or just execute the following command:
+
+```bash
+$ sudo dnf install gobject-introspection-devel cairo-devel atk-devel pango-devel gdk-pixbuf2-devel gtk3-devel -y
+```
+
+You will also need to install the following extra packages too:
+
+- `gcc` / `clang`
+- `cmake`
+- The `Development Tools` group (`sudo dnf groupinstall "Development Tools" -y`)
+
+You can now go back to the [Building page](/docs/building#building-with-cargo)
+and follow the rest of the instructions.
