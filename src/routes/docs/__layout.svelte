@@ -18,6 +18,8 @@
 	// @ts-nocheck
 	import DocTocItem from "$lib/DocTOCItem.svelte";
 	import { sortDocFiles } from "$lib/doc";
+	import Toast from "$lib/Toast.svelte";
+	import { ToastType } from "$lib/types";
 
 	/** @type {import("$lib/doc").DocFile[]} */
 	export let docs;
@@ -40,6 +42,11 @@
 	</div>
 
 	<div class="container">
+		<Toast
+			text="Documentation is still very much WIP, please feel free to contribute."
+			toastType={ToastType.NOTE}
+		/>
+
 		<slot />
 	</div>
 </main>
