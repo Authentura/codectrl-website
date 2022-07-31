@@ -23,39 +23,53 @@
 
 	<main>
 		<div class="bg-flipped grid-left">
+			<div>
+				<h1>A dynamic source code analysis tool...</h1>
+			</div>
+		</div>
+		<div class="bg grid-left">
 			<img src="/images/screenshots/1.png" alt="Screenshot 1" />
 			<div>
-				<h1>Collect logs from multiple remote sources concurrently</h1>
+				<h1>That collects logs in one friendly interface</h1>
 				<p>
-					Host CodeCTRL on your own infrastructure and access the logs via your
-					own desktop or browser.
+					We often use logging to understand what bits of code get executed and what is stored in
+					variables
+					<br /><br />
+					Using CodeCTRL's interface over the console allows you to...
 				</p>
 			</div>
 		</div>
-		<div class="bg grid-right">
+		<div class="bg-flipped grid-right">
 			<div>
-				<h1>View detailed information about any selected log</h1>
-				<p>Displays the following information:</p>
+				<h1>Get detailed information about any selected log</h1>
+				<p>
+					Instead of just the text passed to it,<br /> CodeCTRL collects the following information:
+				</p>
 				<ul>
-					<li>File location and line number.</li>
-					<li>Message and its data-type.</li>
-					<li>Where the log was sent from and when it was received.</li>
-					<li>
-						A detailed stacktrace outlining the structure of where and how the
-						log was created.
-					</li>
+					<li>The call stack</li>
+					<li>The log message</li>
+					<li>Where it was called</li>
+					<li>Some code context for the log</li>
+					<!--
+                        TODO: Make the screenshot more representative of these points.
+
+                        For example it would be better to have the image clearly show that the log (something simple, preferable 1 line)
+                        was called in a context of code. Maybe show the entire function with it.
+                    -->
 				</ul>
 			</div>
 			<img src="/images/screenshots/2.png" alt="Screenshot 2" />
 		</div>
-		<div class="bg-flipped grid-left">
+		<div class="bg grid-left">
 			<img src="/images/screenshots/3.png" alt="Screenshot 3" />
 			<div>
 				<h1>Set alerts for specified keywords</h1>
 				<p>
-					Need to be alerted when a keyword appears in your logs? Set keywords
-					in the settings and CodeCTRL will highlight any log that either
-					matches or contains any of the alert keywords.
+					You know that a function is vulnerable, you just need to know if user input reaches it?
+
+					<br /><br />
+					Insert a logger call to the function, and set an alert for a keyword. Now paste that keyword
+					into every user input. CodeCTRL will alert you if it matches.
 				</p>
 			</div>
 		</div>
