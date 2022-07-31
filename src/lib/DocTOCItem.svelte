@@ -25,9 +25,9 @@
 			<details open>
 				{#if doc.slug === "index"}
 					<summary on:click={() => setTitle(doc.metadata.title)}>
-						<a 
-							href={root} 
-							class="contrast" 
+						<a
+							href={root}
+							class="contrast"
 							class:active={activated}
 							role="button"
 							aria-current="page"
@@ -37,9 +37,9 @@
 					</summary>
 				{:else}
 					<summary on:click={() => setTitle(doc.metadata.title)}>
-						<a 
-							href={`${root}/${doc.slug}`} 
-							class="contrast" 
+						<a
+							href={`${root}/${doc.slug}`}
+							class="contrast"
 							class:active={activated}
 							role="button"
 							aria-current="page"
@@ -88,7 +88,7 @@
 
 <style>
 	summary::after {
-	  translate: 0 40%;
+		translate: 0 40%;
 	}
 
 	details {

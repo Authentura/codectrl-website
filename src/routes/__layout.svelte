@@ -1,5 +1,23 @@
 <script lang="ts">
 	import NavBar from "$lib/NavBar.svelte";
+	import ThemeSwitcher from "$lib/ThemeSwitcher.svelte";
+	import { currentThemeState } from "$lib/stores";
+
+	if (typeof window !== "undefined") {
+		$currentThemeState = window
+			.matchMedia("(prefers-color-scheme: dark)")
+			.media.replace("(prefers-color-scheme: ", "")
+			.replace(")", "")
+			.trim();
+
+		window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (event) => {
+			$currentThemeState = event.matches ? "dark" : "light";
+		});
+	}
+
+	$: if (typeof document !== "undefined") {
+		document.getElementsByTagName("html")[0].setAttribute("data-theme", $currentThemeState);
+	}
 </script>
 
 <NavBar />
@@ -7,25 +25,28 @@
 	<slot />
 </main>
 <div class="footer">
-	Copyright <a href="https://authentura.com">Authentura</a> 2022 
-	| Website source available <a href="https://github.com/Authentura/codectrl-website">here</a>.
+	Copyright <a href="https://authentura.com">Authentura</a> 2022 | Website source available
+	<a href="https://github.com/Authentura/codectrl-website">here</a>.
 </div>
+<ThemeSwitcher />
 
 <style>
 	@font-face {
-		font-family: 'JetBrains Mono';
+		font-family: "JetBrains Mono";
 		font-style: normal;
 		font-weight: 700;
 		font-display: swap;
-		src: url(https://fonts.gstatic.com/s/jetbrainsmono/v13/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxjPQ.ttf) format('truetype');
+		src: url(https://fonts.gstatic.com/s/jetbrainsmono/v13/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxjPQ.ttf)
+			format("truetype");
 	}
 
 	@font-face {
-		font-family: 'Red Hat Display';
+		font-family: "Red Hat Display";
 		font-style: normal;
 		font-weight: 500;
 		font-display: swap;
-		src: url(https://fonts.gstatic.com/s/redhatdisplay/v13/8vIf7wUr0m80wwYf0QCXZzYzUoTK8RZQvRd-D1NYbmyWckg.ttf) format('truetype');
+		src: url(https://fonts.gstatic.com/s/redhatdisplay/v13/8vIf7wUr0m80wwYf0QCXZzYzUoTK8RZQvRd-D1NYbmyWckg.ttf)
+			format("truetype");
 	}
 
 	:root {
@@ -34,23 +55,34 @@
 		--primary-hover: #a81e4f !important;
 	}
 
-
-	@media (prefers-color-scheme: dark) {
-		:root {
-			--secondary: #6b3270 !important;
-		}
+	:global([data-theme="dark"]),
+	:root:not([data-theme="light"]) {
+		--secondary: #6b3270 !important;
+		--switcher-background: white;
+		--switcher-foreground: black;
+		--hero-bg: url("/images/background-dark.svg");
+		--hero-bg-flipped: url("/images/background-dark-flipped.svg");
+		--logo: url("/images/logo-dark.svg");
+		--mode-switch: url("/images/light-mode.svg");
 	}
 
-	@media (prefers-color-scheme: light) {
-		:root {
-			--secondary: #f2b4bf !important;
-		}
+	:global([data-theme="light"]),
+	:root:not([data-theme="dark"]) {
+		--secondary: #f2b4bf !important;
+		--switcher-background: black;
+		--switcher-foreground: white;
+		--hero-bg: url("/images/background-light.svg");
+		--hero-bg-flipped: url("/images/background-light-flipped.svg");
+		--logo: url("/images/logo-light.svg");
+		--mode-switch: url("/images/dark-mode.svg");
 	}
+
+
 
 	:global(pre, code, kbd, samp) {
-		--font-family: 'JetBrains Mono', monospace !important;
+		--font-family: "JetBrains Mono", monospace !important;
 	}
-	
+
 	main {
 		margin: 0;
 		width: 100vw;

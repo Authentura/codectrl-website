@@ -1,6 +1,3 @@
-<script lang="ts">
-</script>
-
 <div class="bar">
 	<nav class="container-fluid">
 		<ul>
@@ -9,8 +6,10 @@
 		<ul>
 			<li><a href="/docs" class="contrast">Documentation</a></li>
 			<li>
-				<a href="https://github.com/Authentura/codectrl" role="button" class="contrast outline hover"
-					>GitHub</a
+				<a
+					href="https://github.com/Authentura/codectrl"
+					role="button"
+					class="contrast outline hover">GitHub</a
 				>
 			</li>
 		</ul>
