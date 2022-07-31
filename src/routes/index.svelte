@@ -30,7 +30,7 @@
 		<div class="bg grid-left">
 			<img src="/images/screenshots/1.png" alt="Screenshot 1" />
 			<div>
-				<h1>That collects logs in one friendly interface.</h1>
+				<h1>That collects logs in one friendly interface</h1>
 				<p>
                     We often use logging to understand what bits of code get executed and what is stored in variables
                     <br><br>
