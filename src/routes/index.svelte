@@ -6,6 +6,8 @@
 	<title>CodeCTRL | Home</title>
 </svelte:head>
 
+<!-- TODO(@svmorris, @sboyden): Reword paragraphs to contain "why" instead of "how".  -->
+
 {#key $currentThemeState}
 	<div class="bg container hero">
 		<div class="inner">
@@ -17,55 +19,43 @@
 		</div>
 	</div>
 
+	<!-- NOTE: Maybe put an extra section in here to explain why? -->
+
 	<main>
 		<div class="bg-flipped grid-left">
 			<img src="/images/screenshots/1.png" alt="Screenshot 1" />
 			<div>
-				<h1>Lorem ipsum</h1>
+				<h1>Collect logs from multiple remote sources concurrently</h1>
 				<p>
-					Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa
-					sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat
-					excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate
-					voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure
-					elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris
-					cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem
-					sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit
-					enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa
-					duis.
+					Host CodeCTRL on your own infrastructure and access the logs via your
+					own desktop or browser.
 				</p>
 			</div>
 		</div>
 		<div class="bg grid-right">
 			<div>
-				<h1>Lorem ipsum</h1>
-				<p>
-					Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa
-					sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat
-					excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate
-					voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure
-					elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris
-					cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem
-					sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit
-					enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa
-					duis.
-				</p>
+				<h1>View detailed information about any selected log</h1>
+				<p>Displays the following information:</p>
+				<ul>
+					<li>File location and line number.</li>
+					<li>Message and its data-type.</li>
+					<li>Where the log was sent from and when it was received.</li>
+					<li>
+						A detailed stacktrace outlining the structure of where and how the
+						log was created.
+					</li>
+				</ul>
 			</div>
 			<img src="/images/screenshots/2.png" alt="Screenshot 2" />
 		</div>
 		<div class="bg-flipped grid-left">
 			<img src="/images/screenshots/3.png" alt="Screenshot 3" />
 			<div>
-				<h1>Lorem ipsum</h1>
+				<h1>Set alerts for specified keywords</h1>
 				<p>
-					Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa
-					sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat
-					excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate
-					voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure
-					elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris
-					cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem
-					sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit
-					enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa
-					duis.
+					Need to be alerted when a keyword appears in your logs? Set keywords
+					in the settings and CodeCTRL will highlight any log that either
+					matches or contains any of the alert keywords.
 				</p>
 			</div>
 		</div>
