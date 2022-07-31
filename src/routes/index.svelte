@@ -32,22 +32,25 @@
 			<div>
 				<h1>That collects logs in one friendly interface</h1>
 				<p>
-                    We often use logging to understand what bits of code get executed and what is stored in variables
-                    <br><br>
-                    Using CodeCTRL's interface over the console allows you to...
+					We often use logging to understand what bits of code get executed and what is stored in
+					variables
+					<br /><br />
+					Using CodeCTRL's interface over the console allows you to...
 				</p>
 			</div>
 		</div>
 		<div class="bg-flipped grid-right">
 			<div>
 				<h1>Get detailed information about any selected log</h1>
-                <p>Instead of just the text passed to it,<br> CodeCTRL collects the following information:</p>
+				<p>
+					Instead of just the text passed to it,<br /> CodeCTRL collects the following information:
+				</p>
 				<ul>
 					<li>The call stack</li>
 					<li>The log message</li>
 					<li>Where it was called</li>
 					<li>Some code context for the log</li>
-                    <!--
+					<!--
                         TODO: Make the screenshot more representative of these points.
 
                         For example it would be better to have the image clearly show that the log (something simple, preferable 1 line)
@@ -62,11 +65,11 @@
 			<div>
 				<h1>Set alerts for specified keywords</h1>
 				<p>
-                    You know that a function is vulnerable, you just need to know if user input reaches it?
+					You know that a function is vulnerable, you just need to know if user input reaches it?
 
-                    <br><br>
-                    Insert a logger call to the function, and set an alert for a keyword. Now paste that keyword into every user input. CodeCTRL will
-                    alert you if it matches.
+					<br /><br />
+					Insert a logger call to the function, and set an alert for a keyword. Now paste that keyword
+					into every user input. CodeCTRL will alert you if it matches.
 				</p>
 			</div>
 		</div>
