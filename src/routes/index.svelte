@@ -27,10 +27,10 @@
 				<h1>A dynamic source code analysis tool...</h1>
 			</div>
 		</div>
-		<div class="bg-flipped grid-left">
+		<div class="bg grid-left">
 			<img src="/images/screenshots/1.png" alt="Screenshot 1" />
 			<div>
-				<h1>that collects logs in one friendly interface.</h1>
+				<h1>That collects logs in one friendly interface.</h1>
 				<p>
                     We often use logging to understand what bits of code get executed and what is stored in variables
                     <br><br>
@@ -38,7 +38,7 @@
 				</p>
 			</div>
 		</div>
-		<div class="bg grid-right">
+		<div class="bg-flipped grid-right">
 			<div>
 				<h1>Get detailed information about any selected log</h1>
                 <p>Instead of just the text passed to it,<br> CodeCTRL collects the following information:</p>
@@ -57,7 +57,7 @@
 			</div>
 			<img src="/images/screenshots/2.png" alt="Screenshot 2" />
 		</div>
-		<div class="bg-flipped grid-left">
+		<div class="bg grid-left">
 			<img src="/images/screenshots/3.png" alt="Screenshot 3" />
 			<div>
 				<h1>Set alerts for specified keywords</h1>
