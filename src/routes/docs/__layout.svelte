@@ -39,7 +39,7 @@
 <main>
 	<div>
 		<aside>
-			<details class="main" open="true">
+			<details class="main" open>
 				<summary>Documentation</summary>
 				<nav class="container-fluid">
 					<ul>
@@ -74,10 +74,13 @@
 		max-width: calc(100% - 1em);
 	}
 
+	main > * {
+		padding: 0.5em;
+	}
+
 	main {
 		display: grid;
 		grid-template-columns: 300px auto;
-		padding: 0.5em;
 		margin: 0;
 		width: 100vw;
 		max-width: 100vw;

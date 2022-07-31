@@ -20,5 +20,6 @@
 <style>
 	.bar {
 		background-color: var(--contrast-inverse);
+		border-bottom: var(--border-width) solid var(--accordion-border-color);
 	}
 </style>
