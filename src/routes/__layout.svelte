@@ -70,17 +70,25 @@
 		--hero-bg-flipped: url("/images/background-dark-flipped.svg");
 		--logo: url("/images/logo-dark.svg");
 		--mode-switch: url("/images/light-mode.svg");
+		--foreground: var(--color);
 	}
 
 	:global([data-theme="light"]),
 	:root:not([data-theme="dark"]) {
 		--secondary: #f2b4bf !important;
+		--h1-color: #070a0e !important;
+		--muted-color: #353855 !important;
 		--switcher-background: black;
 		--switcher-foreground: white;
 		--hero-bg: url("/images/background-light.svg");
 		--hero-bg-flipped: url("/images/background-light-flipped.svg");
 		--logo: url("/images/logo-light.svg");
 		--mode-switch: url("/images/dark-mode.svg");
+		--foreground: var(--h1-color);
+	}
+
+	:global(address, blockquote, dl, figure, form, ol, p, pre, table, ul) {
+		color: var(--foreground);
 	}
 
 	:global(pre, code, kbd, samp) {
