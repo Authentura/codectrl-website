@@ -7,7 +7,7 @@
 	<slot />
 </main>
 <div class="footer">
-	Copyright <a href="https://authentura.com">Authentura</a> 2022
+	Copyright <a href="https://authentura.com">Authentura</a> 2022 | Website source available <a href="">here</a>.
 </div>
 
 <style>

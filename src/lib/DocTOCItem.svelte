@@ -88,7 +88,7 @@
 
 <style>
 	summary::after {
-	  display: none;
+	  translate: 0 40%;
 	}
 
 	details {
@@ -97,7 +97,8 @@
 
 	a.active {
 		color: var(--contrast);
-		background-color: var(--secondary);
+		/* background-color: var(--secondary);*/
+		background-color: #00897b55;
 		border: none;
 		text-align: left;
 		padding: 0.2em;
