@@ -3,12 +3,18 @@
 	import ThemeSwitcher from "$lib/ThemeSwitcher.svelte";
 	import { currentThemeState } from "$lib/stores";
 
+	$: if (typeof localStorage !== "undefined") {
+		localStorage.setItem("theme", $currentThemeState);
+	}
+
 	if (typeof window !== "undefined") {
-		$currentThemeState = window
-			.matchMedia("(prefers-color-scheme: dark)")
-			.media.replace("(prefers-color-scheme: ", "")
-			.replace(")", "")
-			.trim();
+		$currentThemeState =
+			localStorage.getItem("theme") ??
+			window
+				.matchMedia("(prefers-color-scheme: dark)")
+				.media.replace("(prefers-color-scheme: ", "")
+				.replace(")", "")
+				.trim();
 
 		window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (event) => {
 			$currentThemeState = event.matches ? "dark" : "light";
@@ -76,8 +82,6 @@
 		--logo: url("/images/logo-light.svg");
 		--mode-switch: url("/images/dark-mode.svg");
 	}
-
-
 
 	:global(pre, code, kbd, samp) {
 		--font-family: "JetBrains Mono", monospace !important;
