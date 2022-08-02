@@ -1,6 +1,6 @@
 export enum ToastType {
-	NOTE,
-	ALERT,
-	WARNING,
-	ERROR
+    NOTE,
+    ALERT,
+    WARNING,
+    ERROR
 }
