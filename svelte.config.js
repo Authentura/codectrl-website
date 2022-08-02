@@ -8,22 +8,22 @@ const dirname = path.resolve(fileURLToPath(import.meta.url), "../");
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	// Consult https://github.com/sveltejs/svelte-preprocess
-	// for more information about preprocessors
-	extensions: [".svelte", ".md"],
-	preprocess: [
-		preprocess(),
-		mdsvex({
-			extensions: [".md"],
-			layout: {
-				_: path.join(dirname, "./src/routes/docs/_template.svelte")
-			}
-		})
-	],
+    // Consult https://github.com/sveltejs/svelte-preprocess
+    // for more information about preprocessors
+    extensions: [".svelte", ".md"],
+    preprocess: [
+        preprocess(),
+        mdsvex({
+            extensions: [".md"],
+            layout: {
+                _: path.join(dirname, "./src/routes/docs/_template.svelte")
+            }
+        })
+    ],
 
-	kit: {
-		adapter: adapter()
-	}
+    kit: {
+        adapter: adapter()
+    }
 };
 
 export default config;

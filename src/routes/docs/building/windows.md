@@ -24,8 +24,8 @@ title: "Compiling on Windows"
 
 <h1 id="requirements">Requirements</h1>
 
-To build CodeCTRL, you will need the latest Visual Studio C++ redistributables,
-which Rust requires to install. You can find the latest redistributables
+To build CodeCTRL, you will need the latest Visual Studio C++ redistributables, which Rust
+requires to install. You can find the latest redistributables
 [here](https://docs.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170).
 
 You will also need the latest Visual Studio Build Tools which can be found
