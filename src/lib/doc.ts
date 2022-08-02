@@ -1,17 +1,23 @@
 export type DocFile = {
-    metadata: any;
+    metadata: {
+        index?: number;
+        children?: DocFile[];
+    };
     slug: string;
 };
 
-export function sortDocFiles(a: DocFile, b: DocFile): number {
-    const aIndex = a?.metadata?.index;
-    const bIndex = b?.metadata?.index;
+export function sortDocFiles(
+    a: { index: number; file: DocFile },
+    b: { index: number; file: DocFile }
+): number {
+    const aIndex = a.file?.metadata?.index ?? -1;
+    const bIndex = b.file?.metadata?.index ?? -1;
 
-    if (aIndex && bIndex) {
-        return bIndex - aIndex;
-    } else if (aIndex) {
+    if (aIndex > bIndex) {
         return -1;
-    } else {
+    } else if (aIndex < bIndex) {
         return 1;
+    } else {
+        return 0;
     }
 }
