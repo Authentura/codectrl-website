@@ -29,9 +29,27 @@ function getDocs(slug: string | null = null) {
     );
 }
 
-export async function GET() {
-    let docs = await getDocs();
-    docs = docs.sort((a, b) => sortDocFiles(a, b));
+function sort(docs: DocFile[]) {
+    const mapped = docs.map((el, i) => {
+        return { index: i, file: el };
+    });
 
-    return { status: 200, body: { docs } };
+    mapped.sort((a, b) => sortDocFiles(a, b));
+
+    return mapped.map((el) => {
+        if (el.file.metadata.children) {
+            el.file.metadata.children = sort(el.file.metadata.children);
+        }
+
+        return docs[el.index];
+    });
+}
+
+export async function GET() {
+    return {
+        status: 200,
+        body: {
+            docs: sort(await getDocs())
+        }
+    };
 }
