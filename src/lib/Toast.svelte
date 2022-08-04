@@ -50,6 +50,7 @@
     button {
         margin: 1rem auto;
         width: max-content;
+        max-width: 100%;
     }
 
     button > a {
