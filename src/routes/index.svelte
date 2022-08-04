@@ -31,8 +31,8 @@
         <div class="bg grid-left">
             <!-- <img src="/images/screenshots/1.png" alt="Screenshot 1" /> -->
             <Lightbox
-                modalStyle="width: 100%"
-                thumbnailStyle="width: 100% !important"
+                modalClasses="modal"
+                thumbnailClasses="thumbnail"
                 imagePreset="fullscreen"
                 clickToClose={true}
             >
@@ -68,10 +68,9 @@
                     -->
                 </ul>
             </div>
-            <!-- <img src="/images/screenshots/2.png" alt="Screenshot 2" /> -->
             <Lightbox
-                modalStyle="width: 100%"
-                thumbnailStyle="width: 100% !important"
+                modalClasses="modal"
+                thumbnailClasses="thumbnail"
                 imagePreset="fullscreen"
                 clickToClose={true}
             >
@@ -80,8 +79,8 @@
         </div>
         <div class="bg grid-left">
             <Lightbox
-                modalStyle="width: 100%"
-                thumbnailStyle="width: 100% !important"
+                modalClasses="modal"
+                thumbnailClasses="thumbnail"
                 imagePreset="fullscreen"
                 clickToClose={true}
             >
@@ -106,10 +105,22 @@
 <style>
     main {
         height: 100%;
+        max-height: 100%;
     }
 
     main > div {
         padding: 1rem;
+    }
+
+    :global(.thumbnail) {
+        width: 100%;
+    }
+
+    :global(.clickable) {
+        width: 100%;
+        display: flex;
+        align-content: center;
+        justify-content: center;
     }
 
     .grid-left {
