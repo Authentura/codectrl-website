@@ -25,7 +25,11 @@
     export let docs;
 
     /** @type {boolean} */
-    let opened = false;
+    let opened = true;
+
+    if (typeof window !== "undefined" && window.innerWidth <= 750) {
+        opened = false;
+    }
 
     if (typeof localStorage !== "undefined") {
         localStorage.getItem("docs-nav-state-opened") === "true" ?? false;
