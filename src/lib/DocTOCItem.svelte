@@ -19,7 +19,7 @@
 </script>
 
 <div>
-    {#if doc.metadata.children}
+    {#if doc.metadata?.children}
         <li>
             <details open>
                 {#if doc.slug === "index"}
@@ -65,7 +65,7 @@
                 href={`/docs/`}
                 aria-current="page"
             >
-                {doc.metadata.title}
+                {doc.metadata?.title}
             </a>
         </li>
     {:else}
@@ -74,11 +74,10 @@
                 class="contrast"
                 class:active={activated}
                 role="button"
-                on:click={() => setTitle(doc.metadata.title)}
                 href={`${root}/${doc.slug}`}
                 aria-current="page"
             >
-                {doc.metadata.title}
+                {doc.metadata?.title}
             </a>
         </li>
     {/if}
@@ -98,7 +97,7 @@
         background-color: var(--secondary);
         border: none;
         text-align: left;
-        padding: 0.2em;
+        padding: 0.2rem;
     }
 
     a:not(.active) {
@@ -106,6 +105,6 @@
         background-color: unset;
         border: none;
         text-align: left;
-        padding: 0.2em;
+        padding: 0.2rem;
     }
 </style>

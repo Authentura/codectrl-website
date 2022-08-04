@@ -25,7 +25,7 @@
 
 <style>
     .switcher {
-        padding: 0.25em;
+        padding: 0.25rem;
         margin: 0;
         position: fixed;
         bottom: 5%;

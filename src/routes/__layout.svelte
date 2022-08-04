@@ -104,21 +104,21 @@
         margin: 0;
         width: 100%;
         max-width: 100%;
-        height: 90%;
-        max-height: 90%;
-        height: 90%;
+        height: 100%;
+        max-height: 100%;
         overflow-y: auto;
+        overflow-x: hidden;
         padding: 0;
     }
 
     .footer {
         display: block;
         position: fixed;
-        padding: 0.2em;
+        padding: 0.2rem;
         border-top: var(--border-width) solid var(--accordion-border-color);
-        height: 2em;
+        height: 2rem;
         width: 100%;
-        top: calc(100% - 2em);
+        top: calc(100% - 2rem);
         text-align: center;
         background-color: var(--background-color);
     }

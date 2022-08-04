@@ -26,7 +26,7 @@
 </script>
 
 <main>
-    <div>
+    <div class="navbar">
         <aside>
             <details class="main" open>
                 <summary>Documentation</summary>
@@ -61,11 +61,11 @@
     }
 
     .container {
-        margin-left: 1em;
-        padding: 1em;
+        margin-left: 1rem;
+        padding: 1rem;
         border-left: var(--border-width) solid var(--accordion-border-color);
         overflow-y: auto;
-        max-width: calc(100% - 1em);
+        max-width: calc(100% - 1rem);
     }
 
     main > * {
@@ -74,7 +74,7 @@
 
     main {
         display: grid;
-        grid-template-columns: 300px auto;
+        grid-template-columns: 1fr 3fr;
         margin: 0;
         width: 100vw;
         max-width: 100vw;

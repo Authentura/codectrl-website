@@ -37,7 +37,7 @@ function sort(docs: DocFile[]) {
     mapped.sort((a, b) => sortDocFiles(a, b));
 
     return mapped.map((el) => {
-        if (el.file.metadata.children) {
+        if (el.file.metadata?.children) {
             el.file.metadata.children = sort(el.file.metadata.children);
         }
 
