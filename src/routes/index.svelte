@@ -1,5 +1,6 @@
 <script lang="ts">
     import { currentThemeState } from "$lib/stores";
+    import { Lightbox } from "svelte-lightbox";
 </script>
 
 <svelte:head>
@@ -28,7 +29,15 @@
             </div>
         </div>
         <div class="bg grid-left">
-            <img src="/images/screenshots/1.png" alt="Screenshot 1" />
+            <!-- <img src="/images/screenshots/1.png" alt="Screenshot 1" /> -->
+            <Lightbox
+                modalClasses="modal"
+                thumbnailClasses="thumbnail"
+                imagePreset="fullscreen"
+                clickToClose={true}
+            >
+                <img src="/images/screenshots/1.png" alt="Screenshot 1" />
+            </Lightbox>
             <div>
                 <h1>That collects logs in one friendly interface</h1>
                 <p>
@@ -51,18 +60,32 @@
                     <li>Where it was called</li>
                     <li>Some code context for the log</li>
                     <!--
-          	TODO: Make the screenshot more representative of these points.
+          	            TODO: Make the screenshot more representative of these points.
 
-          	For example it would be better to have the image clearly show that
-          	the log (something simple, preferable 1 line) was called in a context
-          	of code. Maybe show the entire function with it.
-          -->
+          	            For example it would be better to have the image clearly show that
+          	            the log (something simple, preferable 1 line) was called in a context
+          	            of code. Maybe show the entire function with it.
+                    -->
                 </ul>
             </div>
-            <img src="/images/screenshots/2.png" alt="Screenshot 2" />
+            <Lightbox
+                modalClasses="modal"
+                thumbnailClasses="thumbnail"
+                imagePreset="fullscreen"
+                clickToClose={true}
+            >
+                <img src="/images/screenshots/2.png" alt="Screenshot 2" />
+            </Lightbox>
         </div>
         <div class="bg grid-left">
-            <img src="/images/screenshots/3.png" alt="Screenshot 3" />
+            <Lightbox
+                modalClasses="modal"
+                thumbnailClasses="thumbnail"
+                imagePreset="fullscreen"
+                clickToClose={true}
+            >
+                <img src="/images/screenshots/3.png" alt="Screenshot 3" />
+            </Lightbox>
             <div>
                 <h1>Set alerts for specified keywords</h1>
                 <p>
@@ -82,10 +105,22 @@
 <style>
     main {
         height: 100%;
+        max-height: 100%;
     }
 
     main > div {
-        padding: 1em;
+        padding: 1rem;
+    }
+
+    :global(.thumbnail) {
+        width: 100%;
+    }
+
+    :global(.clickable) {
+        width: 100%;
+        display: flex;
+        align-content: center;
+        justify-content: center;
     }
 
     .grid-left {
@@ -104,6 +139,19 @@
         justify-content: center;
         align-items: center;
         height: 100%;
+    }
+
+    @media only screen and (max-width: 1000px) {
+        .grid-left,
+        .grid-right {
+            grid-template-columns: unset;
+            gap: 0;
+            grid-template-rows: min-content min-content;
+        }
+
+        .grid-left > :last-child {
+            order: -1;
+        }
     }
 
     .grid-left > *,
@@ -128,18 +176,15 @@
         height: 100%;
     }
 
-    img {
-        width: 40%;
-    }
-
     .logo {
         content: var(--logo);
+        width: 40%;
     }
 
     .bg {
         margin: auto auto;
         background-image: var(--hero-bg);
-        aspect-ratio: 960/300;
+        aspect-ratio: 900/300;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -151,7 +196,7 @@
     .bg-flipped {
         margin: auto auto;
         background-image: var(--hero-bg-flipped);
-        aspect-ratio: 960/300;
+        aspect-ratio: 900/300;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;

@@ -1,15 +1,15 @@
 export type DocFile = {
-    metadata: {
+    metadata?: {
         index?: number;
         children?: DocFile[];
+        title?: string;
     };
     slug: string;
 };
 
-export function sortDocFiles(
-    a: { index: number; file: DocFile },
-    b: { index: number; file: DocFile }
-): number {
+type DocFileSort = { index: number; file: DocFile };
+
+export function sortDocFiles(a: DocFileSort, b: DocFileSort): number {
     const aIndex = a.file?.metadata?.index ?? -1;
     const bIndex = b.file?.metadata?.index ?? -1;
 
