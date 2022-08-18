@@ -14,7 +14,7 @@ children: ["linux"]
 
 You will need the following things, regardless of your platform of choice:
 
--   Rust installed - recommended via [rustup](https://rustup.rs).
+-   Rust installed (MSRV is 1.62) - recommended via [rustup](https://rustup.rs).
 -   An OpenGL-capable device - specific versions unknown as the OpenGL bindings being used
     don't specify supported versions. But to be safe, OpenGL 3.1+ devices should be
     compatible. This does mean that the appropriate graphics drivers will need to be
@@ -57,19 +57,20 @@ cargo run --release
 
 <h1 id="automated-builds">Automated CI Builds</h1>
 
-The CodeCTRL GitHub repository automatically creates builds select platforms
-automatically. This is useful if you want to a bleeding-edge version of CodeCTRL without
-having to build it for yourself.
+The CodeCTRL GitHub repository automatically creates builds on select platforms
+automatically. This is useful if you want to have a bleeding-edge version of CodeCTRL
+without having to build it for yourself.
 
 The currently generated packages are for the following platforms:
 
--   Ubuntu 22.04
--   Fedora 36
--   Fedora Rawhide
--   Windows 7/8(.1)/10/11
+-   Ubuntu 22.04 and 20.04
+-   Debian 11, 10 and Sid
+-   Fedora 36 and Rawhide
+-   RHEL (and compatibles) 7, 8 and 9
+-   Windows 7, 8(.1), 10 and 11
 
-You can access the builds
-[here](https://github.com/Authentura/codectrl/actions/workflows/build-and-package.yml).
+You can access the nightly builds
+[here](https://github.com/Authentura/codectrl/actions/workflows/build-and-package.yml?query=branch%3Amain).
 
 If you wish for more platforms to get automated CI builds, feel free to create an issue
 asking for that platform's support or submit a PR if you believe you can implement it
