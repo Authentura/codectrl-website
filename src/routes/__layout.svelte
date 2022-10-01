@@ -34,11 +34,11 @@
 <main>
     <slot />
 </main>
-<div class="footer">
+<footer>
     Copyright <a href="https://authentura.com">Authentura</a> 2022 | Website source
     available
     <a href="https://github.com/Authentura/codectrl-website">here</a>.
-</div>
+</footer>
 <ThemeSwitcher />
 
 <style>
@@ -101,24 +101,13 @@
     }
 
     main {
-        margin: 0;
-        width: 100%;
-        max-width: 100%;
-        height: 90%;
-        max-height: 90%;
-        overflow-y: auto;
-        overflow-x: hidden;
-        padding: 0;
+        overflow: hidden auto;
     }
 
-    .footer {
-        display: block;
-        position: fixed;
+    footer {
         padding: 0.2rem;
         border-top: var(--border-width) solid var(--accordion-border-color);
         height: 2rem;
-        width: 100%;
-        top: calc(100% - 2rem);
         text-align: center;
         background-color: var(--background-color);
     }
