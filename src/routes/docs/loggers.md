@@ -1,5 +1,5 @@
 ---
-title: "Logging"
+title: "Loggers"
 children: ["implementation"]
 ---
 
@@ -27,4 +27,5 @@ The following languages are planned but not yet started:
 -   Java / Kotlin
 -   C#
 
-If you wish to implement your own logger for a programming language, see the page [here](logging/implementation).
+If you wish to implement your own logger for a programming language, see the page 
+[here](loggers/implementation).
