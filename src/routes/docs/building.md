@@ -1,6 +1,6 @@
 ---
 title: "Building"
-children: ["linux"]
+children: ["linux", "windows"]
 ---
 
 | Table of Contents                                                 |
@@ -25,7 +25,7 @@ You will need the following things, regardless of your platform of choice:
 <h1 id="getting-the-code">Getting the Code</h1>
 
 As mentioned in the [Platform-agnostic Requirements](#platform-agnostic-requirements), you
-will need some basic knowledge of Git _OR_ the know-how to download compressed archive
+will need some basic knowledge of Git, _OR_ the know-how to download compressed archive
 versions of code off of GitHub.
 
 Execute the following command in your terminal/command prompt:
