@@ -12,6 +12,7 @@ example.
 | [What is needed to implement](#what-is-needed) |
 | [Basic logging functions](#basic-log)          |
 | [Batch logging functions](#batch-sending)      |
+| [Connecting to CodeCTRL](#connection)          |
 
 <h1 id="requirements">Requirements</h1>
 
@@ -146,6 +147,20 @@ object or as methods on the object which modify the internal values.
     </td>
   </tr>
 </table>
+
+<h1 id="connection">Connecting to CodeCTRL</h1>
+
+CodeCTRL uses gRPC for both internal and external communication. To get started with gRPC
+for your language, consult the [gRPC documentation](https://grpc.io/docs/languages/)
+first to see if they have already provided a library for your language that you can use to
+communicate with CodeCTRL.
+
+This is where the protobuf files mentioned earlier are used, as they contain the basic
+skeleton of how the logger should communicate with the gRPC server behind CodeCTRL.
+Loggers need _only implement the `LogClient`_ service (authorisation and authentication is 
+still being worked on).
+
+<!-- TODO: Need a non-Rust example as the Rust implementation is generated using Tonic -->
 
 ---
 
