@@ -3,7 +3,10 @@
         <li><strong><a href="/" class="contrast">CodeCTRL</a></strong></li>
     </ul>
     <ul>
-        <li><a href="/docs" class="contrast">Documentation</a></li>
+        <li><a href="/docs" class="contrast">Docs</a></li>
+        <li>
+            <a href="/download" class="contrast">Download</a>
+        </li>
         <li>
             <a
                 href="https://github.com/Authentura/codectrl"
