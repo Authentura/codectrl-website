@@ -3,6 +3,7 @@
 </svelte:head>
 
 <h1 class="centred">Download CodeCTRL</h1>
+<h4 class="centred"><code>1.0.0-beta</code></h4>
 
 <div id="download-section">
     <div id="windows">
